@@ -1,36 +1,20 @@
 ﻿using System.IO;
 
+namespace PersistSystemCore;
+
 /// <summary>
 /// Persist system class used to save and load JSON objects to files. 
 /// </summary>
 public class PersistSystem
 {
-    private string directoryPath;
-
-    public string DirectoryPath
-    {
-        get { return directoryPath; }
-        set { directoryPath = value; }
-    }
-
-    public PersistSystem(string directoryPath)
-    {
-        this.directoryPath = directoryPath;
-
-        if (!Directory.Exists(directoryPath))
-        {
-            Directory.CreateDirectory(directoryPath);
-        }
-    }
-
     /// <summary>
     /// Save a JSON object to a file.
     /// </summary>
-    /// <param name="fileName">File name.</param>
+    /// <param name="filePath">File path.</param>
     /// <param name="json">JSON object that will be saved.</param>
-    public void SaveJSON(string fileName, string json)
+    public static void SaveJSON(string filePath, string json)
     {
-        string filePath = Path.Combine(directoryPath, fileName);
+        ValidateFilePath(filePath);
 
         File.WriteAllText(filePath, json);
     }
@@ -38,17 +22,66 @@ public class PersistSystem
     /// <summary>
     /// Load a JSON object from a file.
     /// </summary>
-    /// <param name="fileName">File name.</param>
+    /// <param name="filePath">File path.</param>
     /// <returns>JSON object.</returns>
-    public string LoadJSON(string fileName)
+    public string LoadJSON(string filePath)
     {
-        string filePath = Path.Combine(directoryPath, fileName);
+        ValidateFilePath(filePath);
 
-        if (File.Exists(filePath))
+        return File.ReadAllText(filePath);
+    }
+
+    /// <summary>
+    /// Determines if file exists or not.
+    /// </summary>
+    /// <param name="filePath">Given file path.</param>
+    /// <returns>True if file exists, otherwise false.</returns>
+    public static bool FileExist(string filePath)
+    {
+        if (!File.Exists(filePath))
         {
-            return File.ReadAllText(filePath);
+            return false;
         }
 
-        throw new Exception("File not found: " + filePath);
+        return true;
+    }
+
+    /// <summary>
+    /// Determines if directory exists or not.
+    /// </summary>
+    /// <param name="directoryPath">Given directory path.</param>
+    /// <returns>True if directory exists, otherwise false.</returns>
+    public static bool DirectoryExists(string directoryPath)
+    {
+        if (!Directory.Exists(directoryPath))
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Validates given file path. Throws FileNotFoundException if file does not exist.
+    /// </summary>
+    /// <param name="filePath">Given file path.</param>
+    public static void ValidateFilePath(string filePath)
+    {
+        if (!FileExist(filePath))
+        {
+            throw new FileNotFoundException("File not found: " + filePath);
+        }
+    }
+
+    /// <summary>
+    /// Validates given directory path. Throws DirectoryNotFoundException if file does not exist.
+    /// </summary>
+    /// <param name="directoryPath">Given directory path.</param>
+    public static void ValidateDirectoryPath(string directoryPath)
+    {
+        if (!DirectoryExists(directoryPath))
+        {
+            throw new DirectoryNotFoundException("Directory not found: " + directoryPath);
+        }
     }
 }
