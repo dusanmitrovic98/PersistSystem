@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace PersistSystemCore;
+﻿namespace PersistSystemCore;
 
 /// <summary>
 /// Persist system class used to save and load JSON objects to files. 
