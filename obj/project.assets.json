@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BK2O198\\Documents\\Libraries\\C#\\PersistSystem\\PersistSystem.csproj",
+      "projectUniqueName": "C:\\Users\\BK2O198\\Documents\\Workstation\\PersistSystem\\PersistSystem.csproj",
       "projectName": "PersistSystem",
-      "projectPath": "C:\\Users\\BK2O198\\Documents\\Libraries\\C#\\PersistSystem\\PersistSystem.csproj",
+      "projectPath": "C:\\Users\\BK2O198\\Documents\\Workstation\\PersistSystem\\PersistSystem.csproj",
       "packagesPath": "C:\\Users\\BK2O198\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BK2O198\\Documents\\Libraries\\C#\\PersistSystem\\obj\\",
+      "outputPath": "C:\\Users\\BK2O198\\Documents\\Workstation\\PersistSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BK2O198\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

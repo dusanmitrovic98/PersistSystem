@@ -311,6 +311,16 @@ The default value is null.</param>
         <para>The Generic category includes all other Android devices.</para>
       </summary>
     </member>
+    <member name="T:UnityEngine.Android.DiagnosticsReporting">
+      <summary>
+        <para>Class with options for reporting diagnostics information to the Android system.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEngine.Android.DiagnosticsReporting.CallReportFullyDrawn">
+      <summary>
+        <para>Calls &lt;a href="https:developer.android.comreferenceandroidappActivity#reportFullyDrawn()"&gt;reportFullyDrawn()&lt;/a&gt; on the main Activity in the Android application, which is used for diagnostic and optimization purposes in Android.</para>
+      </summary>
+    </member>
     <member name="T:UnityEngine.Android.DownloadAssetPackAsyncOperation">
       <summary>
         <para>Represents an asynchronous Android asset pack download operation. AndroidAssetPacks.DownloadAssetPackAsync returns an instance of this class.</para>

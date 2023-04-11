@@ -2111,13 +2111,6 @@
  </para>
       </summary>
     </member>
-    <member name="P:UnityEngine.UIElements.BaseVerticalCollectionView.bindItem">
-      <summary>
-        <para>
- Callback for binding a data item to the visual element.
- </para>
-      </summary>
-    </member>
     <member name="F:UnityEngine.UIElements.BaseVerticalCollectionView.borderUssClassName">
       <summary>
         <para>
@@ -2130,13 +2123,6 @@
         <para>
  Returns the content container for the BaseVerticalCollectionView. Because the BaseVerticalCollectionView
  control automatically manages its content, this always returns null.
- </para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.UIElements.BaseVerticalCollectionView.destroyItem">
-      <summary>
-        <para>
- Callback invoked when a VisualElement created via makeItem is no longer needed and will be destroyed.
  </para>
       </summary>
     </member>
@@ -2173,13 +2159,6 @@
       <summary>
         <para>
  The USS class name applied to an item element on drag hover.
- </para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.UIElements.BaseVerticalCollectionView.itemHeight">
-      <summary>
-        <para>
- The height of a single item in the list, in pixels.
  </para>
       </summary>
     </member>
@@ -2235,17 +2214,10 @@
  </para>
       </summary>
     </member>
-    <member name="P:UnityEngine.UIElements.BaseVerticalCollectionView.makeItem">
-      <summary>
-        <para>
- Callback for constructing the VisualElement that is the template for each recycled and re-bound element in the list.
- </para>
-      </summary>
-    </member>
     <member name="?:UnityEngine.UIElements.BaseVerticalCollectionView.onItemsChosen(System.Action`1&lt;System.Collections.Generic.IEnumerable`1&lt;System.Object&gt;&gt;)">
       <summary>
         <para>
- Callback triggered when the user acts on a selection of one or more items, for example by double-clicking or pressing Enter.
+ Obsolete. Use BaseVerticalCollectionView.itemsChosen instead.
  </para>
       </summary>
       <param name="value"></param>
@@ -2253,7 +2225,7 @@
     <member name="?:UnityEngine.UIElements.BaseVerticalCollectionView.onSelectedIndicesChange(System.Action`1&lt;System.Collections.Generic.IEnumerable`1&lt;System.Int32&gt;&gt;)">
       <summary>
         <para>
- Callback triggered when the selection changes.
+ Obsolete. Use BaseVerticalCollectionView.selectedIndicesChanged instead.
  </para>
       </summary>
       <param name="value"></param>
@@ -2261,7 +2233,7 @@
     <member name="?:UnityEngine.UIElements.BaseVerticalCollectionView.onSelectionChange(System.Action`1&lt;System.Collections.Generic.IEnumerable`1&lt;System.Object&gt;&gt;)">
       <summary>
         <para>
- Callback triggered when the selection changes.
+ Obsolete. Use BaseVerticalCollectionView.selectionChanged instead.
  </para>
       </summary>
       <param name="value"></param>
@@ -2276,7 +2248,7 @@
     <member name="P:UnityEngine.UIElements.BaseVerticalCollectionView.resolvedItemHeight">
       <summary>
         <para>
- The computed pixel-aligned height for the list elements.
+ Obsolete, will be removed from the API.
  </para>
       </summary>
     </member>
@@ -2349,13 +2321,6 @@
  </para>
       </summary>
     </member>
-    <member name="P:UnityEngine.UIElements.BaseVerticalCollectionView.unbindItem">
-      <summary>
-        <para>
- Callback for unbinding a data item from the VisualElement.
- </para>
-      </summary>
-    </member>
     <member name="F:UnityEngine.UIElements.BaseVerticalCollectionView.ussClassName">
       <summary>
         <para>
@@ -2421,19 +2386,6 @@
       <param name="itemsSource">The list of items to use as a data source.</param>
       <param name="itemHeight">The height of each item, in pixels. For &lt;c&gt;FixedHeight&lt;/c&gt; virtualization only.</param>
     </member>
-    <member name="M:UnityEngine.UIElements.BaseVerticalCollectionView.#ctor(System.Collections.IList,System.Single,System.Func`1&lt;UnityEngine.UIElements.VisualElement&gt;,System.Action`2&lt;UnityEngine.UIElements.VisualElement,System.Int32&gt;)">
-      <summary>
-        <para>
- Constructs a BaseVerticalCollectionView, with all required properties provided.
- </para>
-      </summary>
-      <param name="itemsSource">The list of items to use as a data source.</param>
-      <param name="itemHeight">The height of each item, in pixels. For &lt;c&gt;FixedHeight&lt;/c&gt; virtualization only.</param>
-      <param name="makeItem">The factory method to call to create a display item. The method should return a
- VisualElement that can be bound to a data item.</param>
-      <param name="bindItem">The method to call to bind a data item to a display item. The method
- receives as parameters the display item to bind, and the index of the data item to bind it to.</param>
-    </member>
     <member name="M:UnityEngine.UIElements.BaseVerticalCollectionView.GetRootElementForId(System.Int32)">
       <summary>
         <para>
@@ -2493,14 +2445,6 @@
  </para>
       </summary>
       <param name="visualElement">The element to scroll to.</param>
-    </member>
-    <member name="M:UnityEngine.UIElements.BaseVerticalCollectionView.ScrollToId(System.Int32)">
-      <summary>
-        <para>
- Scrolls to a specific item id and makes it visible.
- </para>
-      </summary>
-      <param name="id">Item id to scroll to.</param>
     </member>
     <member name="M:UnityEngine.UIElements.BaseVerticalCollectionView.ScrollToItem(System.Int32)">
       <summary>
@@ -2988,7 +2932,7 @@
  Remove callback from the instance.
  </para>
       </summary>
-      <param name="callback">The callback to remove.</param>
+      <param name="callback">The callback to remove. If this callback was never registered, nothing happens.</param>
       <param name="useTrickleDown">Set this parameter to true to remove the callback from the TrickleDown phase. Set this parameter to false to remove the callback from the BubbleUp phase.</param>
     </member>
     <member name="M:UnityEngine.UIElements.CallbackEventHandler.UnregisterCallback(UnityEngine.UIElements.EventCallback`2&lt;TEventType,TUserArgsType&gt;,UnityEngine.UIElements.TrickleDown)">
@@ -2997,7 +2941,7 @@
  Remove callback from the instance.
  </para>
       </summary>
-      <param name="callback">The callback to remove.</param>
+      <param name="callback">The callback to remove. If this callback was never registered, nothing happens.</param>
       <param name="useTrickleDown">Set this parameter to true to remove the callback from the TrickleDown phase. Set this parameter to false to remove the callback from the BubbleUp phase.</param>
     </member>
     <member name="T:UnityEngine.UIElements.ChangeEvent`1">
@@ -3090,8 +3034,8 @@
  Constructor.
  </para>
       </summary>
-      <param name="delay">Determines when the event begins. Applies if delay &amp;gt; 0.</param>
-      <param name="interval">Determines the time delta between event repetition. Applies if interval &amp;gt; 0.</param>
+      <param name="delay">Determines when the event begins. Value is defined in milliseconds. Applies if delay &amp;gt; 0.</param>
+      <param name="interval">Determines the time delta between event repetition. Value is defined in milliseconds. Applies if interval &amp;gt; 0.</param>
     </member>
     <member name="M:UnityEngine.UIElements.Clickable.#ctor">
       <summary>
@@ -3761,7 +3705,7 @@
     <member name="P:UnityEngine.UIElements.CommandEventBase_1.commandName">
       <summary>
         <para>
- Name of the command.
+ The command to validate or execute.
  </para>
       </summary>
     </member>
@@ -5019,7 +4963,7 @@
     <member name="P:UnityEngine.UIElements.EventBase.propagationPhase">
       <summary>
         <para>
- The current propagation phase.
+ The current propagation phase for this event. 
  </para>
       </summary>
     </member>
@@ -5033,7 +4977,7 @@
     <member name="P:UnityEngine.UIElements.EventBase.timestamp">
       <summary>
         <para>
- The time when the event was created.
+ The time when the event was created, in milliseconds.
  </para>
       </summary>
     </member>
@@ -5275,7 +5219,7 @@
     <member name="T:UnityEngine.UIElements.ExecuteCommandEvent">
       <summary>
         <para>
- The event sent when an element should execute a command.
+ This event is sent by the Editor when an element in the panel should execute a command.
  </para>
       </summary>
     </member>
@@ -9022,7 +8966,7 @@
     <member name="P:UnityEngine.UIElements.IResolvedStyle.whiteSpace">
       <summary>
         <para>
- Word wrapping over multiple lines if not enough space is available to draw the text of an element.
+ Word wrap over multiple lines if not enough space is available to draw the text of an element.
  </para>
       </summary>
     </member>
@@ -9603,7 +9547,7 @@
     <member name="P:UnityEngine.UIElements.IStyle.whiteSpace">
       <summary>
         <para>
- Word wrapping over multiple lines if not enough space is available to draw the text of an element.
+ Word wrap over multiple lines if not enough space is available to draw the text of an element.
  </para>
       </summary>
     </member>
@@ -13444,7 +13388,7 @@
     <member name="T:UnityEngine.UIElements.PopupWindow">
       <summary>
         <para>
- Styled visual element that matches the EditorGUILayout.Popup IMGUI element.
+ Styled visual element that matches the EditorGUILayout.Popup IMGUI element. This element doesn't have any functionality. It's just a container with a border and a title, rather than a window or popup.
  </para>
       </summary>
     </member>
@@ -13925,8 +13869,8 @@
  </para>
       </summary>
       <param name="clickEvent">The action to execute when the button is pressed.</param>
-      <param name="delay">The initial delay before the action is executed for the first time.</param>
-      <param name="interval">The interval between each execution of the action.</param>
+      <param name="delay">The initial delay before the action is executed for the first time. Value is defined in milliseconds.</param>
+      <param name="interval">The interval between each execution of the action. Value is defined in milliseconds.</param>
     </member>
     <member name="M:UnityEngine.UIElements.RepeatButton.SetAction">
       <summary>
@@ -13935,8 +13879,8 @@
  </para>
       </summary>
       <param name="clickEvent">The action to execute.</param>
-      <param name="delay">The initial delay before the action is executed for the first time.</param>
-      <param name="interval">The interval between each execution of the action.</param>
+      <param name="delay">The initial delay before the action is executed for the first time. Value is defined in milliseconds.</param>
+      <param name="interval">The interval between each execution of the action. Value is defined in milliseconds.</param>
     </member>
     <member name="T:UnityEngine.UIElements.RepeatButton.UxmlFactory">
       <summary>
@@ -14312,7 +14256,7 @@
     <member name="T:UnityEngine.UIElements.ScrollView">
       <summary>
         <para>
- Displays its contents inside a scrollable frame.
+ Displays its contents inside a scrollable frame. For more information, see. 
  </para>
       </summary>
     </member>
@@ -14914,7 +14858,7 @@
     <member name="P:UnityEngine.UIElements.SortColumnDescription.columnIndex">
       <summary>
         <para>
- The index of the column.
+ The index of the column to be used to find the column only if the SortColumnDescription.columnName|columnName isn't set.
  </para>
       </summary>
     </member>
@@ -17665,7 +17609,7 @@
     <member name="M:UnityEngine.UIElements.UQueryBuilder_1.Focused">
       <summary>
         <para>
- Selects all elements that are enabled.
+ Selects all elements that are focused.
  </para>
       </summary>
     </member>
@@ -17729,7 +17673,7 @@
     <member name="M:UnityEngine.UIElements.UQueryBuilder_1.NotChecked">
       <summary>
         <para>
- Selects all elements that npot checked.
+ Selects all elements that not checked.
  </para>
       </summary>
     </member>
@@ -17820,7 +17764,7 @@
     <member name="M:UnityEngine.UIElements.UQueryBuilder_1.Visible">
       <summary>
         <para>
- Selects all elements that are not visible.
+ Selects all elements that are visible.
  </para>
       </summary>
     </member>
@@ -18937,7 +18881,7 @@
     <member name="T:UnityEngine.UIElements.ValidateCommandEvent">
       <summary>
         <para>
- The event sent to probe which elements accepts a command.
+ This event is sent by the Editor while it determines whether the command will be handled by an element in the panel.
  </para>
       </summary>
     </member>
@@ -19331,14 +19275,14 @@
     <member name="T:UnityEngine.UIElements.Visibility">
       <summary>
         <para>
- Specifies whether or not a VisualElement is visible.
+ Style value that specifies whether or not a VisualElement is visible.
  </para>
       </summary>
     </member>
     <member name="F:UnityEngine.UIElements.Visibility.Hidden">
       <summary>
         <para>
- The VisualElement is hidden. Hidden VisualElements will take up space in their parent layout if their positionType is set to PositionType.Relative. Use the display property to both hide and remove a VisualElement from the parent VisualElement layout.
+ The VisualElement is hidden. Hidden VisualElements will take up space in their parent layout if their positionType is set to PositionType.Relative. Use the DisplayStyle style property to both hide and remove a VisualElement from the parent VisualElement layout. Note, this is the enum value used when setting styles via VisualElement.style.visibility. In C#, you can just use VisualElement.visible = false.
  </para>
       </summary>
     </member>
@@ -19509,7 +19453,7 @@
     <member name="P:UnityEngine.UIElements.VisualElement.tooltip">
       <summary>
         <para>
- Text to display inside an information box after the user hovers the element for a small amount of time.
+ Text to display inside an information box after the user hovers the element for a small amount of time. This is only supported in the Editor UI.
  </para>
       </summary>
     </member>
@@ -20369,7 +20313,9 @@
     <member name="T:UnityEngine.UIElements.VisualTreeAsset">
       <summary>
         <para>
- An instance of this class holds a tree of VisualElementAssets, created from a UXML file. Each node in the file corresponds to a VisualElementAsset. You can clone a VisualTreeAsset to yield a tree of VisualElements.
+ An instance of this class holds a tree of VisualElementAssets, created from a UXML file. Each node in the file corresponds to a VisualElementAsset. You can clone a VisualTreeAsset to create a tree of VisualElements.
+
+ Note: You can't generate a VisualTreeAsset from raw UXML at runtime.
  </para>
       </summary>
     </member>

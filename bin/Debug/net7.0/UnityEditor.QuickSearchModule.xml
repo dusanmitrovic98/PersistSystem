@@ -4578,6 +4578,11 @@ The manual contains example on &lt;a href="https:docs.unity3d.comDocumentationMa
         <para>Returns the number keywords in the index.</para>
       </summary>
     </member>
+    <member name="P:UnityEditor.Search.SearchIndexer.minQueryLength">
+      <summary>
+        <para>Minimal length of a query. By default it is 1 character.</para>
+      </summary>
+    </member>
     <member name="P:UnityEditor.Search.SearchIndexer.minWordIndexationLength">
       <summary>
         <para>Minimal indexed word size. Default is 2.</para>

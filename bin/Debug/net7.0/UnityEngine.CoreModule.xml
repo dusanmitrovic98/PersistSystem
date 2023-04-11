@@ -693,13 +693,13 @@ Here is an example of handling the callback:</para>
     </member>
     <member name="M:UnityEngine.Application.CanStreamedLevelBeLoaded(System.Int32)">
       <summary>
-        <para>Can the streamed level be loaded?</para>
+        <para>Checks if the streamed level can be loaded.</para>
       </summary>
       <param name="levelIndex"></param>
     </member>
     <member name="M:UnityEngine.Application.CanStreamedLevelBeLoaded(System.String)">
       <summary>
-        <para>Can the streamed level be loaded?</para>
+        <para>Checks if the streamed level can be loaded.</para>
       </summary>
       <param name="levelName"></param>
     </member>
@@ -4572,7 +4572,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
     </member>
     <member name="P:UnityEngine.CombineInstance.transform">
       <summary>
-        <para>Matrix to transform the Mesh with before combining.</para>
+        <para>Matrix to transform the Mesh with before combining. Refer to Mesh.CombineMeshes for an example.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.Component">
@@ -5047,7 +5047,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
     </member>
     <member name="P:UnityEngine.ComputeBuffer.stride">
       <summary>
-        <para>Size of one element in the buffer (Read Only).</para>
+        <para>Size of one element in the buffer in bytes (Read Only).</para>
       </summary>
     </member>
     <member name="M:UnityEngine.ComputeBuffer.BeginWrite(System.Int32,System.Int32)">
@@ -6888,7 +6888,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="end">Point in world space where the line should end.</param>
       <param name="color">Color of the line.</param>
       <param name="duration">How long the line should be visible for.</param>
-      <param name="depthTest">Should the line be obscured by objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
       <summary>
@@ -6898,7 +6898,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="end">Point in world space where the line should end.</param>
       <param name="color">Color of the line.</param>
       <param name="duration">How long the line should be visible for.</param>
-      <param name="depthTest">Should the line be obscured by objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
       <summary>
@@ -6908,7 +6908,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="end">Point in world space where the line should end.</param>
       <param name="color">Color of the line.</param>
       <param name="duration">How long the line should be visible for.</param>
-      <param name="depthTest">Should the line be obscured by objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
       <summary>
@@ -6918,7 +6918,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="end">Point in world space where the line should end.</param>
       <param name="color">Color of the line.</param>
       <param name="duration">How long the line should be visible for.</param>
-      <param name="depthTest">Should the line be obscured by objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3)">
       <summary>
@@ -6928,7 +6928,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="dir">Direction and length of the ray.</param>
       <param name="color">Color of the drawn line.</param>
       <param name="duration">How long the line will be visible for (in seconds).</param>
-      <param name="depthTest">Should the line be obscured by other objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
       <summary>
@@ -6938,7 +6938,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="dir">Direction and length of the ray.</param>
       <param name="color">Color of the drawn line.</param>
       <param name="duration">How long the line will be visible for (in seconds).</param>
-      <param name="depthTest">Should the line be obscured by other objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
       <summary>
@@ -6948,7 +6948,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="dir">Direction and length of the ray.</param>
       <param name="color">Color of the drawn line.</param>
       <param name="duration">How long the line will be visible for (in seconds).</param>
-      <param name="depthTest">Should the line be obscured by other objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
       <summary>
@@ -6958,7 +6958,7 @@ The default value is Camera.MonoOrStereoscopicEye.Left, so Camera.MonoOrStereosc
       <param name="dir">Direction and length of the ray.</param>
       <param name="color">Color of the drawn line.</param>
       <param name="duration">How long the line will be visible for (in seconds).</param>
-      <param name="depthTest">Should the line be obscured by other objects closer to the camera?</param>
+      <param name="depthTest">Determines whether objects closer to the camera obscure the line.</param>
     </member>
     <member name="M:UnityEngine.Debug.ExtractStackTraceNoAlloc(System.Byte*,System.Int32,System.String)">
       <summary>
@@ -8267,7 +8267,7 @@ The invalid memory access is performed on each platform as follows:</para>
     </member>
     <member name="F:UnityEngine.Display.displays">
       <summary>
-        <para>The list of currently connected displays.</para>
+        <para>The list of connected displays.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Display.main">
@@ -8778,7 +8778,7 @@ Note: this value can be set in the Lighting Window UI and it is serialized, that
     </member>
     <member name="M:UnityEngine.Events.UnityEventBase.RemoveAllListeners">
       <summary>
-        <para>Remove all non-persisent (ie created from script) listeners  from the event.</para>
+        <para>Remove all non-persistent (ie created from script) listeners  from the event.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.Events.UnityEventBase.SetPersistentListenerState(System.Int32,UnityEngine.Events.UnityEventCallState)">
@@ -9936,7 +9936,7 @@ GPU frame captures can be used to both analyze performance and debug graphics re
     </member>
     <member name="F:UnityEngine.Experimental.Rendering.GraphicsFormat.B8G8R8_SRGB">
       <summary>
-        <para>A three-component, 24-bit unsigned normalized format that has an 8-bit R component stored with sRGB nonlinear encoding in byte 0, an 8-bit G component stored with sRGB nonlinear encoding in byte 1, and an 8-bit B component stored with sRGB nonlinear encoding in byte 2.</para>
+        <para>A three-component, 24-bit unsigned normalized format that has an 8-bit B component stored with sRGB nonlinear encoding in byte 0, an 8-bit G component stored with sRGB nonlinear encoding in byte 1, and an 8-bit R component stored with sRGB nonlinear encoding in byte 2.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Experimental.Rendering.GraphicsFormat.B8G8R8_UInt">
@@ -11388,13 +11388,13 @@ When a ray-triangle intersection test succeeds for a sub-meshes that is marked a
     </member>
     <member name="M:UnityEngine.Experimental.Rendering.RayTracingAccelerationStructure.#ctor">
       <summary>
-        <para>Creates a RayTracingAccelerationStructure with the given RayTracingAccelerationStructure.RASSettings.</para>
+        <para>Creates a RayTracingAccelerationStructure with the given RayTracingAccelerationStructure.Settings.</para>
       </summary>
       <param name="settings">Defines whether a RayTracingAccelerationStructure is updated by the user or the Engine, and whether to mask certain object layers or RayTracingModes.</param>
     </member>
     <member name="M:UnityEngine.Experimental.Rendering.RayTracingAccelerationStructure.#ctor(UnityEngine.Experimental.Rendering.RayTracingAccelerationStructure/RASSettings)">
       <summary>
-        <para>Creates a RayTracingAccelerationStructure with the given RayTracingAccelerationStructure.RASSettings.</para>
+        <para>Creates a RayTracingAccelerationStructure with the given RayTracingAccelerationStructure.Settings.</para>
       </summary>
       <param name="settings">Defines whether a RayTracingAccelerationStructure is updated by the user or the Engine, and whether to mask certain object layers or RayTracingModes.</param>
     </member>
@@ -13188,7 +13188,7 @@ When a ray-triangle intersection test succeeds for a sub-meshes that is marked a
     </member>
     <member name="P:UnityEngine.Gizmos.color">
       <summary>
-        <para>Sets the color for the gizmos that will be drawn next.</para>
+        <para>Sets the Color of the gizmos that are drawn next.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Gizmos.exposure">
@@ -13993,18 +13993,18 @@ The destination texture format should be uncompressed and correspond to a suppor
     </member>
     <member name="M:UnityEngine.Graphics.CreateAsyncGraphicsFence(UnityEngine.Rendering.SynchronisationStage)">
       <summary>
-        <para>Shortcut for calling Graphics.CreateGraphicsFence with GraphicsFenceType.AsyncQueueSynchronization as the first parameter.</para>
+        <para>Shortcut for calling Graphics.CreateGraphicsFence with Rendering.GraphicsFenceType.AsyncQueueSynchronisation as the first parameter.</para>
       </summary>
-      <param name="stage">The synchronization stage. See Graphics.CreateGraphicsFence.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
       <returns>
         <para>Returns a new GraphicsFence.</para>
       </returns>
     </member>
     <member name="M:UnityEngine.Graphics.CreateAsyncGraphicsFence">
       <summary>
-        <para>Shortcut for calling Graphics.CreateGraphicsFence with GraphicsFenceType.AsyncQueueSynchronization as the first parameter.</para>
+        <para>Shortcut for calling Graphics.CreateGraphicsFence with Rendering.GraphicsFenceType.AsyncQueueSynchronisation as the first parameter.</para>
       </summary>
-      <param name="stage">The synchronization stage. See Graphics.CreateGraphicsFence.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
       <returns>
         <para>Returns a new GraphicsFence.</para>
       </returns>
@@ -14017,10 +14017,20 @@ The destination texture format should be uncompressed and correspond to a suppor
     </member>
     <member name="M:UnityEngine.Graphics.CreateGraphicsFence">
       <summary>
-        <para>Creates a GraphicsFence which will be passed after the last Blit, Clear, Draw, Dispatch or Texture Copy command prior to this call has been completed on the GPU.</para>
+        <para>Creates a GraphicsFence.</para>
       </summary>
-      <param name="fenceType">The type of GraphicsFence to create. Currently the only supported value is GraphicsFenceType.AsyncQueueSynchronization.</param>
-      <param name="stage">On some platforms there is a significant gap between the vertex processing completing and the pixel processing begining for a given draw call. This parameter allows for the fence to be passed after either the vertex or pixel processing for the proceeding draw has completed. If a compute shader dispatch was the last task submitted then this parameter is ignored.</param>
+      <param name="fenceType">The Rendering.GraphicsFenceType to create. Currently the only supported value is Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
+      <returns>
+        <para>Returns a new GraphicsFence.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEngine.Graphics.CreateGraphicsFence(UnityEngine.Rendering.GraphicsFenceType,UnityEngine.Rendering.SynchronisationStageFlags)">
+      <summary>
+        <para>Creates a GraphicsFence.</para>
+      </summary>
+      <param name="fenceType">The Rendering.GraphicsFenceType to create. Currently the only supported value is Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
       <returns>
         <para>Returns a new GraphicsFence.</para>
       </returns>
@@ -14732,17 +14742,17 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
     </member>
     <member name="M:UnityEngine.Graphics.WaitOnAsyncGraphicsFence(UnityEngine.Rendering.GraphicsFence)">
       <summary>
-        <para>Instructs the GPU's processing of the graphics queue to wait until the given GraphicsFence is passed.</para>
+        <para>Instructs the GPU to pause processing of the queue until it passes through the GraphicsFence fence.</para>
       </summary>
-      <param name="fence">The GraphicsFence that the GPU will be instructed to wait upon before proceeding with its processing of the graphics queue.</param>
-      <param name="stage">On some platforms there is a significant gap between the vertex processing completing and the pixel processing begining for a given draw call. This parameter allows for requested wait to be before the next items vertex or pixel processing begins. If a compute shader dispatch is the next item to be submitted then this parameter is ignored.</param>
+      <param name="fence">The GraphicsFence the GPU waits for. The fenceType of the graphics fence must be Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to wait for.</param>
     </member>
     <member name="M:UnityEngine.Graphics.WaitOnAsyncGraphicsFence(UnityEngine.Rendering.GraphicsFence,UnityEngine.Rendering.SynchronisationStage)">
       <summary>
-        <para>Instructs the GPU's processing of the graphics queue to wait until the given GraphicsFence is passed.</para>
+        <para>Instructs the GPU to pause processing of the queue until it passes through the GraphicsFence fence.</para>
       </summary>
-      <param name="fence">The GraphicsFence that the GPU will be instructed to wait upon before proceeding with its processing of the graphics queue.</param>
-      <param name="stage">On some platforms there is a significant gap between the vertex processing completing and the pixel processing begining for a given draw call. This parameter allows for requested wait to be before the next items vertex or pixel processing begins. If a compute shader dispatch is the next item to be submitted then this parameter is ignored.</param>
+      <param name="fence">The GraphicsFence the GPU waits for. The fenceType of the graphics fence must be Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to wait for.</param>
     </member>
     <member name="M:UnityEngine.Graphics.WaitOnGPUFence(UnityEngine.Rendering.GPUFence,UnityEngine.Rendering.SynchronisationStage)">
       <summary>
@@ -14773,7 +14783,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
     </member>
     <member name="P:UnityEngine.GraphicsBuffer.stride">
       <summary>
-        <para>Size of one element in the buffer (Read Only).</para>
+        <para>Size of one element in the buffer. For index buffers, this must be either 2 or 4 bytes (Read Only).</para>
       </summary>
     </member>
     <member name="P:UnityEngine.GraphicsBuffer.target">
@@ -20071,7 +20081,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
     </member>
     <member name="P:UnityEngine.LineRenderer.numCapVertices">
       <summary>
-        <para>Set this to a value greater than 0, to get rounded corners on each end of the line.</para>
+        <para>Set this to a value greater than 0, to get rounded corners on each end of the line. The default is 0.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.LineRenderer.numCornerVertices">
@@ -23865,7 +23875,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <param name="combine">Descriptions of the Meshes to combine.</param>
       <param name="mergeSubMeshes">Defines whether Meshes should be combined into a single sub-mesh.</param>
       <param name="useMatrices">Defines whether the transforms supplied in the CombineInstance array should be used or ignored.</param>
-      <param name="hasLightmapData"></param>
+      <param name="hasLightmapData">Defines whether to transform the input Mesh lightmap UV data using the lightmap scale offset data in CombineInstance structs.</param>
     </member>
     <member name="M:UnityEngine.Mesh.CombineMeshes(UnityEngine.CombineInstance[])">
       <summary>
@@ -23874,7 +23884,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <param name="combine">Descriptions of the Meshes to combine.</param>
       <param name="mergeSubMeshes">Defines whether Meshes should be combined into a single sub-mesh.</param>
       <param name="useMatrices">Defines whether the transforms supplied in the CombineInstance array should be used or ignored.</param>
-      <param name="hasLightmapData"></param>
+      <param name="hasLightmapData">Defines whether to transform the input Mesh lightmap UV data using the lightmap scale offset data in CombineInstance structs.</param>
     </member>
     <member name="M:UnityEngine.Mesh.CombineMeshes(UnityEngine.CombineInstance[],System.Boolean)">
       <summary>
@@ -23883,7 +23893,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <param name="combine">Descriptions of the Meshes to combine.</param>
       <param name="mergeSubMeshes">Defines whether Meshes should be combined into a single sub-mesh.</param>
       <param name="useMatrices">Defines whether the transforms supplied in the CombineInstance array should be used or ignored.</param>
-      <param name="hasLightmapData"></param>
+      <param name="hasLightmapData">Defines whether to transform the input Mesh lightmap UV data using the lightmap scale offset data in CombineInstance structs.</param>
     </member>
     <member name="M:UnityEngine.Mesh.CombineMeshes(UnityEngine.CombineInstance[],System.Boolean,System.Boolean)">
       <summary>
@@ -23892,7 +23902,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <param name="combine">Descriptions of the Meshes to combine.</param>
       <param name="mergeSubMeshes">Defines whether Meshes should be combined into a single sub-mesh.</param>
       <param name="useMatrices">Defines whether the transforms supplied in the CombineInstance array should be used or ignored.</param>
-      <param name="hasLightmapData"></param>
+      <param name="hasLightmapData">Defines whether to transform the input Mesh lightmap UV data using the lightmap scale offset data in CombineInstance structs.</param>
     </member>
     <member name="M:UnityEngine.Mesh.#ctor">
       <summary>
@@ -24139,7 +24149,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <summary>
         <para>Fetches the triangle list for the specified sub-mesh on this object.</para>
       </summary>
-      <param name="triangles">A list of vertex indices to populate.</param>
+      <param name="triangles">A list of vertex indices to populate. Any existing items in the list are replaced.</param>
       <param name="submesh">The sub-mesh index. See subMeshCount.</param>
       <param name="applyBaseVertex">True (default value) will apply base vertex offset to returned indices.</param>
     </member>
@@ -24147,7 +24157,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <summary>
         <para>Fetches the triangle list for the specified sub-mesh on this object.</para>
       </summary>
-      <param name="triangles">A list of vertex indices to populate.</param>
+      <param name="triangles">A list of vertex indices to populate. Any existing items in the list are replaced.</param>
       <param name="submesh">The sub-mesh index. See subMeshCount.</param>
       <param name="applyBaseVertex">True (default value) will apply base vertex offset to returned indices.</param>
     </member>
@@ -24155,7 +24165,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <summary>
         <para>Fetches the triangle list for the specified sub-mesh on this object.</para>
       </summary>
-      <param name="triangles">A list of vertex indices to populate.</param>
+      <param name="triangles">A list of vertex indices to populate. Any existing items in the list are replaced.</param>
       <param name="submesh">The sub-mesh index. See subMeshCount.</param>
       <param name="applyBaseVertex">True (default value) will apply base vertex offset to returned indices.</param>
     </member>
@@ -24163,7 +24173,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <summary>
         <para>Fetches the triangle list for the specified sub-mesh on this object.</para>
       </summary>
-      <param name="triangles">A list of vertex indices to populate.</param>
+      <param name="triangles">A list of vertex indices to populate. Any existing items in the list are replaced.</param>
       <param name="submesh">The sub-mesh index. See subMeshCount.</param>
       <param name="applyBaseVertex">True (default value) will apply base vertex offset to returned indices.</param>
     </member>
@@ -24171,7 +24181,7 @@ For indexed rendering, use Graphics.RenderPrimitivesIndexed. Draws procedural ge
       <summary>
         <para>Fetches the triangle list for the specified sub-mesh on this object.</para>
       </summary>
-      <param name="triangles">A list of vertex indices to populate.</param>
+      <param name="triangles">A list of vertex indices to populate. Any existing items in the list are replaced.</param>
       <param name="submesh">The sub-mesh index. See subMeshCount.</param>
       <param name="applyBaseVertex">True (default value) will apply base vertex offset to returned indices.</param>
     </member>
@@ -25654,7 +25664,7 @@ Use false when you want to use the existing bounding box and reduce the CPU cost
     </member>
     <member name="P:UnityEngine.MeshFilter.mesh">
       <summary>
-        <para>Returns the instantiated Mesh assigned to the mesh filter.</para>
+        <para>Returns either a new Mesh|mesh or a duplicate of the existing mesh, and assigns it to the mesh filter.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.MeshFilter.sharedMesh">
@@ -31778,7 +31788,7 @@ See Also: ReflectionProbeTimeSlicingMode.</para>
       <summary>
         <para>Refreshes the probe's cubemap.</para>
       </summary>
-      <param name="targetTexture">Target RendeTexture in which rendering should be done. Specifying null will update the probe's default texture.</param>
+      <param name="targetTexture">Target RenderTexture in which rendering should be done. Specifying null will update the probe's default texture.</param>
       <returns>
         <para>
           An integer representing a RenderID which can subsequently be used to check if the probe has finished rendering while rendering in time-slice mode.
@@ -32057,14 +32067,14 @@ See Also: ReflectionProbeTimeSlicingMode.</para>
         <para>Lets you set or clear per-renderer or per-material parameter overrides.</para>
       </summary>
       <param name="properties">Property block with values you want to override.</param>
-      <param name="materialIndex">The index of the Material you want to override the parameters of. The index ranges from 0 to Renderer.sharedMaterial.Length-1.</param>
+      <param name="materialIndex">The index of the Material you want to override the parameters of. The index ranges from 0 to Renderer.sharedMaterials.Length-1.</param>
     </member>
     <member name="M:UnityEngine.Renderer.SetPropertyBlock(UnityEngine.MaterialPropertyBlock,System.Int32)">
       <summary>
         <para>Lets you set or clear per-renderer or per-material parameter overrides.</para>
       </summary>
       <param name="properties">Property block with values you want to override.</param>
-      <param name="materialIndex">The index of the Material you want to override the parameters of. The index ranges from 0 to Renderer.sharedMaterial.Length-1.</param>
+      <param name="materialIndex">The index of the Material you want to override the parameters of. The index ranges from 0 to Renderer.sharedMaterials.Length-1.</param>
     </member>
     <member name="M:UnityEngine.Renderer.SetSharedMaterials(System.Collections.Generic.List`1&lt;UnityEngine.Material&gt;)">
       <summary>
@@ -32134,7 +32144,47 @@ See Also: ReflectionProbeTimeSlicingMode.</para>
         <para>Returns an AsyncGPUReadbackRequest that you can use to determine when the data is available. Otherwise, a request with an error is returned.</para>
       </returns>
     </member>
+    <member name="M:UnityEngine.Rendering.AsyncGPUReadback.Request(UnityEngine.GraphicsBuffer,System.Action`1&lt;UnityEngine.Rendering.AsyncGPUReadbackRequest&gt;)">
+      <summary>
+        <para>Retrieves data asynchronously from a GPU resource.</para>
+      </summary>
+      <param name="src">Resource to read the data from.</param>
+      <param name="size">Size in bytes of the data to be retrieved from the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="offset">Offset in bytes in the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="mipIndex">Index of the mipmap to be fetched.</param>
+      <param name="dstFormat">Target TextureFormat of the data. If the target format is different from the format stored on the GPU, the conversion is automatic.</param>
+      <param name="x">Starting X coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="width">Width in pixels of the Texture data to be fetched.</param>
+      <param name="y">Starting Y coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="height">Height in pixels of the Texture data to be fetched.</param>
+      <param name="z">Start Z coordinate in pixels for the Texture3D being fetched. Index of Start layer for TextureCube, Texture2DArray and TextureCubeArray being fetched.</param>
+      <param name="depth">Depth in pixels for Texture3D being fetched. Number of layers for TextureCube, TextureArray and TextureCubeArray.</param>
+      <param name="callback">An optional delegate System.Action called once the request is fullfilled. The completed request is passed as parameter to the System.Action.</param>
+      <returns>
+        <para>Returns an AsyncGPUReadbackRequest that you can use to determine when the data is available. Otherwise, a request with an error is returned.</para>
+      </returns>
+    </member>
     <member name="M:UnityEngine.Rendering.AsyncGPUReadback.Request(UnityEngine.ComputeBuffer,System.Int32,System.Int32,System.Action`1&lt;UnityEngine.Rendering.AsyncGPUReadbackRequest&gt;)">
+      <summary>
+        <para>Retrieves data asynchronously from a GPU resource.</para>
+      </summary>
+      <param name="src">Resource to read the data from.</param>
+      <param name="size">Size in bytes of the data to be retrieved from the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="offset">Offset in bytes in the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="mipIndex">Index of the mipmap to be fetched.</param>
+      <param name="dstFormat">Target TextureFormat of the data. If the target format is different from the format stored on the GPU, the conversion is automatic.</param>
+      <param name="x">Starting X coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="width">Width in pixels of the Texture data to be fetched.</param>
+      <param name="y">Starting Y coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="height">Height in pixels of the Texture data to be fetched.</param>
+      <param name="z">Start Z coordinate in pixels for the Texture3D being fetched. Index of Start layer for TextureCube, Texture2DArray and TextureCubeArray being fetched.</param>
+      <param name="depth">Depth in pixels for Texture3D being fetched. Number of layers for TextureCube, TextureArray and TextureCubeArray.</param>
+      <param name="callback">An optional delegate System.Action called once the request is fullfilled. The completed request is passed as parameter to the System.Action.</param>
+      <returns>
+        <para>Returns an AsyncGPUReadbackRequest that you can use to determine when the data is available. Otherwise, a request with an error is returned.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEngine.Rendering.AsyncGPUReadback.Request(UnityEngine.GraphicsBuffer,System.Int32,System.Int32,System.Action`1&lt;UnityEngine.Rendering.AsyncGPUReadbackRequest&gt;)">
       <summary>
         <para>Retrieves data asynchronously from a GPU resource.</para>
       </summary>
@@ -32194,6 +32244,26 @@ See Also: ReflectionProbeTimeSlicingMode.</para>
         <para>Returns an AsyncGPUReadbackRequest that you can use to determine when the data is available. Otherwise, a request with an error is returned.</para>
       </returns>
     </member>
+    <member name="M:UnityEngine.Rendering.AsyncGPUReadback.Request(UnityEngine.Texture,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,System.Action`1&lt;UnityEngine.Rendering.AsyncGPUReadbackRequest&gt;)">
+      <summary>
+        <para>Retrieves data asynchronously from a GPU resource.</para>
+      </summary>
+      <param name="src">Resource to read the data from.</param>
+      <param name="size">Size in bytes of the data to be retrieved from the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="offset">Offset in bytes in the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="mipIndex">Index of the mipmap to be fetched.</param>
+      <param name="dstFormat">Target TextureFormat of the data. If the target format is different from the format stored on the GPU, the conversion is automatic.</param>
+      <param name="x">Starting X coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="width">Width in pixels of the Texture data to be fetched.</param>
+      <param name="y">Starting Y coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="height">Height in pixels of the Texture data to be fetched.</param>
+      <param name="z">Start Z coordinate in pixels for the Texture3D being fetched. Index of Start layer for TextureCube, Texture2DArray and TextureCubeArray being fetched.</param>
+      <param name="depth">Depth in pixels for Texture3D being fetched. Number of layers for TextureCube, TextureArray and TextureCubeArray.</param>
+      <param name="callback">An optional delegate System.Action called once the request is fullfilled. The completed request is passed as parameter to the System.Action.</param>
+      <returns>
+        <para>Returns an AsyncGPUReadbackRequest that you can use to determine when the data is available. Otherwise, a request with an error is returned.</para>
+      </returns>
+    </member>
     <member name="M:UnityEngine.Rendering.AsyncGPUReadback.Request(UnityEngine.Texture,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Action`1&lt;UnityEngine.Rendering.AsyncGPUReadbackRequest&gt;)">
       <summary>
         <para>Retrieves data asynchronously from a GPU resource.</para>
@@ -32215,6 +32285,26 @@ See Also: ReflectionProbeTimeSlicingMode.</para>
       </returns>
     </member>
     <member name="M:UnityEngine.Rendering.AsyncGPUReadback.Request(UnityEngine.Texture,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,UnityEngine.TextureFormat,System.Action`1&lt;UnityEngine.Rendering.AsyncGPUReadbackRequest&gt;)">
+      <summary>
+        <para>Retrieves data asynchronously from a GPU resource.</para>
+      </summary>
+      <param name="src">Resource to read the data from.</param>
+      <param name="size">Size in bytes of the data to be retrieved from the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="offset">Offset in bytes in the ComputeBuffer or GraphicsBuffer.</param>
+      <param name="mipIndex">Index of the mipmap to be fetched.</param>
+      <param name="dstFormat">Target TextureFormat of the data. If the target format is different from the format stored on the GPU, the conversion is automatic.</param>
+      <param name="x">Starting X coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="width">Width in pixels of the Texture data to be fetched.</param>
+      <param name="y">Starting Y coordinate in pixels of the Texture data to be fetched.</param>
+      <param name="height">Height in pixels of the Texture data to be fetched.</param>
+      <param name="z">Start Z coordinate in pixels for the Texture3D being fetched. Index of Start layer for TextureCube, Texture2DArray and TextureCubeArray being fetched.</param>
+      <param name="depth">Depth in pixels for Texture3D being fetched. Number of layers for TextureCube, TextureArray and TextureCubeArray.</param>
+      <param name="callback">An optional delegate System.Action called once the request is fullfilled. The completed request is passed as parameter to the System.Action.</param>
+      <returns>
+        <para>Returns an AsyncGPUReadbackRequest that you can use to determine when the data is available. Otherwise, a request with an error is returned.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEngine.Rendering.AsyncGPUReadback.Request(UnityEngine.Texture,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,System.Action`1&lt;UnityEngine.Rendering.AsyncGPUReadbackRequest&gt;)">
       <summary>
         <para>Retrieves data asynchronously from a GPU resource.</para>
       </summary>
@@ -32614,6 +32704,11 @@ See Also: ReflectionProbeTimeSlicingMode.</para>
         <para>The format of this attachment.</para>
       </summary>
     </member>
+    <member name="P:UnityEngine.Rendering.AttachmentDescriptor.format">
+      <summary>
+        <para>The format of this attachment.</para>
+      </summary>
+    </member>
     <member name="P:UnityEngine.Rendering.AttachmentDescriptor.graphicsFormat">
       <summary>
         <para>The GraphicsFormat of this attachment. To use in place of format.</para>
@@ -32672,6 +32767,32 @@ See Also: ReflectionProbeTimeSlicingMode.</para>
       </summary>
       <param name="fmt">The format of this attachment.</param>
       <param name="format"></param>
+      <param name="target"></param>
+      <param name="loadExistingContents"></param>
+      <param name="storeResults"></param>
+      <param name="resolve"></param>
+    </member>
+    <member name="M:UnityEngine.Rendering.AttachmentDescriptor.#ctor(UnityEngine.Experimental.Rendering.GraphicsFormat)">
+      <summary>
+        <para>Create a AttachmentDescriptor to be used with RenderPass.</para>
+      </summary>
+      <param name="fmt">The format of this attachment.</param>
+      <param name="format"></param>
+      <param name="target"></param>
+      <param name="loadExistingContents"></param>
+      <param name="storeResults"></param>
+      <param name="resolve"></param>
+    </member>
+    <member name="M:UnityEngine.Rendering.AttachmentDescriptor.#ctor(UnityEngine.RenderTextureFormat,UnityEngine.Rendering.RenderTargetIdentifier,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+        <para>Create a AttachmentDescriptor to be used with RenderPass.</para>
+      </summary>
+      <param name="fmt">The format of this attachment.</param>
+      <param name="format"></param>
+      <param name="target"></param>
+      <param name="loadExistingContents"></param>
+      <param name="storeResults"></param>
+      <param name="resolve"></param>
     </member>
     <member name="T:UnityEngine.Rendering.BatchBufferTarget">
       <summary>
@@ -34324,7 +34445,7 @@ If the length of the array is 0, set its value to null.</para>
         <para>Adds a "clear render target" command.</para>
       </summary>
       <param name="clearDepth">Whether to clear both the depth buffer and the stencil buffer.</param>
-      <param name="clearColor">Should clear color buffer?</param>
+      <param name="clearColor">Whether to clear the color buffer.</param>
       <param name="clearFlags">Which render targets to clear, defined using a bitwise OR combination of RTClearFlags values.</param>
       <param name="backgroundColor">Color to clear with.</param>
       <param name="depth">Depth to clear with (default is 1.0).</param>
@@ -34335,7 +34456,7 @@ If the length of the array is 0, set its value to null.</para>
         <para>Adds a "clear render target" command.</para>
       </summary>
       <param name="clearDepth">Whether to clear both the depth buffer and the stencil buffer.</param>
-      <param name="clearColor">Should clear color buffer?</param>
+      <param name="clearColor">Whether to clear the color buffer.</param>
       <param name="clearFlags">Which render targets to clear, defined using a bitwise OR combination of RTClearFlags values.</param>
       <param name="backgroundColor">Color to clear with.</param>
       <param name="depth">Depth to clear with (default is 1.0).</param>
@@ -34474,18 +34595,18 @@ If the length of the array is 0, set its value to null.</para>
     </member>
     <member name="M:UnityEngine.Rendering.CommandBuffer.CreateAsyncGraphicsFence">
       <summary>
-        <para>Shortcut for calling GommandBuffer.CreateGraphicsFence with GraphicsFenceType.AsyncQueueSynchronization as the first parameter.</para>
+        <para>Shortcut for calling CommandBuffer.CreateGraphicsFence with Rendering.GraphicsFenceType.AsyncQueueSynchronisation as the first parameter.</para>
       </summary>
-      <param name="stage">The synchronization stage. See Graphics.CreateGraphicsFence.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
       <returns>
         <para>Returns a new GraphicsFence.</para>
       </returns>
     </member>
     <member name="M:UnityEngine.Rendering.CommandBuffer.CreateAsyncGraphicsFence(UnityEngine.Rendering.SynchronisationStage)">
       <summary>
-        <para>Shortcut for calling GommandBuffer.CreateGraphicsFence with GraphicsFenceType.AsyncQueueSynchronization as the first parameter.</para>
+        <para>Shortcut for calling CommandBuffer.CreateGraphicsFence with Rendering.GraphicsFenceType.AsyncQueueSynchronisation as the first parameter.</para>
       </summary>
-      <param name="stage">The synchronization stage. See Graphics.CreateGraphicsFence.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
       <returns>
         <para>Returns a new GraphicsFence.</para>
       </returns>
@@ -34498,10 +34619,20 @@ If the length of the array is 0, set its value to null.</para>
     </member>
     <member name="M:UnityEngine.Rendering.CommandBuffer.CreateGraphicsFence">
       <summary>
-        <para>Creates a GraphicsFence which will be passed after the last Blit, Clear, Draw, Dispatch or Texture Copy command prior to this call has been completed on the GPU.</para>
+        <para>Creates a GraphicsFence.</para>
       </summary>
-      <param name="fenceType">The type of GraphicsFence to create. Currently the only supported value is GraphicsFenceType.AsyncQueueSynchronization.</param>
-      <param name="stage">On some platforms there is a significant gap between the vertex processing completing and the pixel processing begining for a given draw call. This parameter allows for the fence to be passed after either the vertex or pixel processing for the proceeding draw has completed. If a compute shader dispatch was the last task submitted then this parameter is ignored.</param>
+      <param name="fenceType">The Rendering.GraphicsFenceType to create. Currently the only supported value is Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
+      <returns>
+        <para>Returns a new GraphicsFence.</para>
+      </returns>
+    </member>
+    <member name="M:UnityEngine.Rendering.CommandBuffer.CreateGraphicsFence(UnityEngine.Rendering.GraphicsFenceType,UnityEngine.Rendering.SynchronisationStageFlags)">
+      <summary>
+        <para>Creates a GraphicsFence.</para>
+      </summary>
+      <param name="fenceType">The Rendering.GraphicsFenceType to create. Currently the only supported value is Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to insert the fence after.</param>
       <returns>
         <para>Returns a new GraphicsFence.</para>
       </returns>
@@ -34641,6 +34772,8 @@ If the length of the array is 0, set its value to null.</para>
       <summary>
         <para>Adds a "draw mesh with instancing" command.
 
+The mesh will be just drawn once, it won't be per-pixel lit and will not cast or receive realtime shadows.
+
 The command will not immediately fail and throw an exception if Material.enableInstancing is false, but it will log an error and skips rendering each time the command is being executed if such a condition is detected.
 
 InvalidOperationException will be thrown if the current platform doesn't support this API (i.e. if GPU instancing is not available). See SystemInfo.supportsInstancing.</para>
@@ -34657,6 +34790,8 @@ InvalidOperationException will be thrown if the current platform doesn't support
       <summary>
         <para>Adds a "draw mesh with instancing" command.
 
+The mesh will be just drawn once, it won't be per-pixel lit and will not cast or receive realtime shadows.
+
 The command will not immediately fail and throw an exception if Material.enableInstancing is false, but it will log an error and skips rendering each time the command is being executed if such a condition is detected.
 
 InvalidOperationException will be thrown if the current platform doesn't support this API (i.e. if GPU instancing is not available). See SystemInfo.supportsInstancing.</para>
@@ -34672,6 +34807,8 @@ InvalidOperationException will be thrown if the current platform doesn't support
     <member name="M:UnityEngine.Rendering.CommandBuffer.DrawMeshInstanced(UnityEngine.Mesh,System.Int32,UnityEngine.Material,System.Int32,UnityEngine.Matrix4x4[])">
       <summary>
         <para>Adds a "draw mesh with instancing" command.
+
+The mesh will be just drawn once, it won't be per-pixel lit and will not cast or receive realtime shadows.
 
 The command will not immediately fail and throw an exception if Material.enableInstancing is false, but it will log an error and skips rendering each time the command is being executed if such a condition is detected.
 
@@ -37204,17 +37341,17 @@ Polygons that are not parallel to the near and far clip planes have Z slope. Adj
     </member>
     <member name="M:UnityEngine.Rendering.CommandBuffer.WaitOnAsyncGraphicsFence(UnityEngine.Rendering.GraphicsFence)">
       <summary>
-        <para>Instructs the GPU to wait until the given GraphicsFence is passed.</para>
+        <para>Instructs the GPU to pause processing of the queue until it passes through the GraphicsFence fence.</para>
       </summary>
-      <param name="fence">The GraphicsFence that the GPU will be instructed to wait upon before proceeding with its processing of the graphics queue.</param>
-      <param name="stage">On some platforms there is a significant gap between the vertex processing completing and the pixel processing beginning for a given draw call. This parameter allows for a requested wait to be made before the next item's vertex or pixel processing begins. If a compute shader dispatch is the next item to be submitted then this parameter is ignored.</param>
+      <param name="fence">The GraphicsFence the GPU waits for. The fenceType of the graphics fence must be Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to wait for.</param>
     </member>
     <member name="M:UnityEngine.Rendering.CommandBuffer.WaitOnAsyncGraphicsFence(UnityEngine.Rendering.GraphicsFence,UnityEngine.Rendering.SynchronisationStage)">
       <summary>
-        <para>Instructs the GPU to wait until the given GraphicsFence is passed.</para>
+        <para>Instructs the GPU to pause processing of the queue until it passes through the GraphicsFence fence.</para>
       </summary>
-      <param name="fence">The GraphicsFence that the GPU will be instructed to wait upon before proceeding with its processing of the graphics queue.</param>
-      <param name="stage">On some platforms there is a significant gap between the vertex processing completing and the pixel processing beginning for a given draw call. This parameter allows for a requested wait to be made before the next item's vertex or pixel processing begins. If a compute shader dispatch is the next item to be submitted then this parameter is ignored.</param>
+      <param name="fence">The GraphicsFence the GPU waits for. The fenceType of the graphics fence must be Rendering.GraphicsFenceType.AsyncQueueSynchronisation.</param>
+      <param name="stage">Which SynchronisationStage to wait for.</param>
     </member>
     <member name="M:UnityEngine.Rendering.CommandBuffer.WaitOnGPUFence(UnityEngine.Rendering.GPUFence,UnityEngine.Rendering.SynchronisationStage)">
       <summary>
@@ -37289,22 +37426,22 @@ Where possible, set this value to false for better performance.
     </member>
     <member name="F:UnityEngine.Rendering.CompareFunction.Greater">
       <summary>
-        <para>Pass depth or stencil test when new value is greater than old one.</para>
+        <para>Pass depth or stencil test when new value is greater than current value.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.CompareFunction.GreaterEqual">
       <summary>
-        <para>Pass depth or stencil test when new value is greater or equal than old one.</para>
+        <para>Pass depth or stencil test when new value is greater or equal than current value.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.CompareFunction.Less">
       <summary>
-        <para>Pass depth or stencil test when new value is less than old one.</para>
+        <para>Pass depth or stencil test when new value is less than current value.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.CompareFunction.LessEqual">
       <summary>
-        <para>Pass depth or stencil test when new value is less or equal than old one.</para>
+        <para>Pass depth or stencil test when new value is less or equal than current value.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.CompareFunction.Never">
@@ -37764,13 +37901,13 @@ Where possible, set this value to false for better performance.
     </member>
     <member name="M:UnityEngine.Rendering.DrawingSettings.GetShaderPassName(System.Int32)">
       <summary>
-        <para>Get the shader passes that this draw call can render.</para>
+        <para>Get the name of the shader pass.</para>
       </summary>
       <param name="index">Index of the shader pass to use.</param>
     </member>
     <member name="M:UnityEngine.Rendering.DrawingSettings.SetShaderPassName(System.Int32,UnityEngine.Rendering.ShaderTagId)">
       <summary>
-        <para>Set the shader passes that this draw call can render.</para>
+        <para>Set the name of the shader pass.</para>
       </summary>
       <param name="index">Index of the shader pass to use.</param>
       <param name="shaderPassName">Name of the shader pass.</param>
@@ -37912,22 +38049,27 @@ For Unity to exclude a GameObject from rendering, the GameObject must have moved
     </member>
     <member name="T:UnityEngine.Rendering.GizmoSubset">
       <summary>
-        <para>Gizmo subsets.</para>
+        <para>Specifies whether gizmos render before or after postprocessing for a camera render.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.GizmoSubset.PostImageEffects">
       <summary>
-        <para>Use to specify gizmos that should be rendered after ImageEffects.</para>
+        <para>Specifies gizmos that are rendered after ImageEffects.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.GizmoSubset.PreImageEffects">
       <summary>
-        <para>Use to specify gizmos that should be rendered before ImageEffects.</para>
+        <para>Specifies gizmos that are rendered before ImageEffects.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.Rendering.GlobalKeyword">
       <summary>
         <para>Represents a global shader keyword.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.Rendering.GlobalKeyword.name">
+      <summary>
+        <para>The name of the shader keyword. (Read Only)</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Rendering.GlobalKeyword.name">
@@ -38067,24 +38209,22 @@ For Unity to exclude a GameObject from rendering, the GameObject must have moved
     </member>
     <member name="P:UnityEngine.Rendering.GraphicsFence.passed">
       <summary>
-        <para>Determines whether the GraphicsFence has passed.
-
-Allows the CPU to determine whether the GPU has passed the point in its processing represented by the GraphicsFence.</para>
+        <para>true if GPU execution has passed the processing point where you inserted the GraphicsFence, otherwise false.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.Rendering.GraphicsFenceType">
       <summary>
-        <para>The type of the GraphicsFence. Currently the only supported fence type is AsyncQueueSynchronization.</para>
+        <para>The type of GraphicFence.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.GraphicsFenceType.AsyncQueueSynchronisation">
       <summary>
-        <para>The GraphicsFence can be used to synchronise between different GPU queues, as well as to synchronise between GPU and the CPU.</para>
+        <para>You can use the graphics fence to synchronize different GPU queues, or the GPU and the CPU.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.GraphicsFenceType.CPUSynchronisation">
       <summary>
-        <para>The GraphicsFence can only be used to synchronize between the GPU and the CPU.</para>
+        <para>You can use the graphics fence to synchronize the GPU and the CPU. This value is not supported.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.Rendering.GraphicsSettings">
@@ -38433,9 +38573,23 @@ Allows the CPU to determine whether the GPU has passed the point in its processi
       <param name="shader">The Shader to use.</param>
       <param name="name">The name of the local shader keyword.</param>
     </member>
+    <member name="M:UnityEngine.Rendering.LocalKeyword.#ctor(UnityEngine.Shader,System.String)">
+      <summary>
+        <para>Initializes and returns a LocalKeyword struct that represents an existing local shader keyword for a given Shader.</para>
+      </summary>
+      <param name="shader">The Shader to use.</param>
+      <param name="name">The name of the local shader keyword.</param>
+    </member>
     <member name="M:UnityEngine.Rendering.LocalKeyword.#ctor(UnityEngine.ComputeShader,System.String)">
       <summary>
-        <para>Initializes and returns a LocalKeyword struct that represents an existing local shader keyword for a given ComputeShader</para>
+        <para>Initializes and returns a LocalKeyword struct that represents an existing local shader keyword for a given ComputeShader.</para>
+      </summary>
+      <param name="shader">The ComputeShader to use.</param>
+      <param name="name">The name of the local shader keyword.</param>
+    </member>
+    <member name="M:UnityEngine.Rendering.LocalKeyword.#ctor(UnityEngine.ComputeShader,System.String)">
+      <summary>
+        <para>Initializes and returns a LocalKeyword struct that represents an existing local shader keyword for a given ComputeShader.</para>
       </summary>
       <param name="shader">The ComputeShader to use.</param>
       <param name="name">The name of the local shader keyword.</param>
@@ -38890,6 +39044,15 @@ Usage example: provide a buffer address for the property.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.Rendering.RasterState.#ctor(UnityEngine.Rendering.CullMode,System.Int32,System.Single)">
+      <summary>
+        <para>Creates a new raster state with the given values.</para>
+      </summary>
+      <param name="cullingMode">Controls which sides of polygons should be culled (not drawn).</param>
+      <param name="offsetUnits">Scales the minimum resolvable depth buffer value in the GPU's depth bias setting.</param>
+      <param name="offsetFactor">Scales the maximum Z slope in the GPU's depth bias setting.</param>
+      <param name="depthClip"></param>
+    </member>
+    <member name="M:UnityEngine.Rendering.RasterState.#ctor(UnityEngine.Rendering.CullMode,System.Int32,System.Single,System.Boolean)">
       <summary>
         <para>Creates a new raster state with the given values.</para>
       </summary>
@@ -39423,6 +39586,18 @@ Updating a probe's cubemap is a costly operation. Unity needs to render the enti
         <para>Executes RenderRequests submitted using Camera.SubmitRenderRequests.</para>
       </summary>
       <param name="renderRequests">The list of RenderRequests to execute.</param>
+      <param name="context"></param>
+      <param name="camera"></param>
+      <param name="renderRequest"></param>
+    </member>
+    <member name="M:UnityEngine.Rendering.RenderPipeline.ProcessRenderRequests(UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,RequestData)">
+      <summary>
+        <para>Executes RenderRequests submitted using Camera.SubmitRenderRequests.</para>
+      </summary>
+      <param name="renderRequests">The list of RenderRequests to execute.</param>
+      <param name="context"></param>
+      <param name="camera"></param>
+      <param name="renderRequest"></param>
     </member>
     <member name="M:UnityEngine.Rendering.RenderPipeline.Render(UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1&lt;UnityEngine.Camera&gt;)">
       <summary>
@@ -40246,6 +40421,16 @@ Updating a probe's cubemap is a costly operation. Unity needs to render the enti
         <para>This property enables a conservative method for calculating the size and position of the minimal enclosing sphere around the frustum cascade corner points for shadow culling.</para>
       </summary>
     </member>
+    <member name="P:UnityEngine.Rendering.ScriptableCullingParameters.conservativeEnclosingSphere">
+      <summary>
+        <para>This property enables a conservative method for calculating the size and position of the minimal enclosing sphere around the frustum cascade corner points for shadow culling.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.Rendering.ScriptableCullingParameters.cullingJobsLowerLimit">
+      <summary>
+        <para>The lower limit to the value ScriptableCullingParameters.maximumPortalCullingJobs.</para>
+      </summary>
+    </member>
     <member name="P:UnityEngine.Rendering.ScriptableCullingParameters.cullingJobsLowerLimit">
       <summary>
         <para>The lower limit to the value ScriptableCullingParameters.maximumPortalCullingJobs.</para>
@@ -40324,6 +40509,11 @@ Updating a probe's cubemap is a costly operation. Unity needs to render the enti
     <member name="P:UnityEngine.Rendering.ScriptableCullingParameters.shadowDistance">
       <summary>
         <para>Shadow distance to use for the cull.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.Rendering.ScriptableCullingParameters.shadowNearPlaneOffset">
+      <summary>
+        <para>Offset to apply to the near camera plane when performing shadow map rendering.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Rendering.ScriptableCullingParameters.shadowNearPlaneOffset">
@@ -41928,6 +42118,11 @@ Values must be in the range 0 to 1. With higher values, Unity culls more objects
         <para>Determines if Enlighten Baked Global Illumination lightmapper is supported. If it is not supported, Enlighten-specific settings do not appear in the Editor, which then defaults to the CPU Lightmapper.</para>
       </summary>
     </member>
+    <member name="P:UnityEngine.Rendering.SupportedRenderingFeatures.enlightenLightmapper">
+      <summary>
+        <para>Determines if Enlighten Baked Global Illumination lightmapper is supported. If it is not supported, Enlighten-specific settings do not appear in the Editor, which then defaults to the CPU Lightmapper.</para>
+      </summary>
+    </member>
     <member name="P:UnityEngine.Rendering.SupportedRenderingFeatures.lightmapBakeTypes">
       <summary>
         <para>What baking types are supported. The unsupported ones will be hidden from the UI. See LightmapBakeType.</para>
@@ -42090,17 +42285,17 @@ Values must be in the range 0 to 1. With higher values, Unity culls more objects
     </member>
     <member name="T:UnityEngine.Rendering.SynchronisationStage">
       <summary>
-        <para>Broadly describes the stages of processing a draw call on the GPU.</para>
+        <para>The stages of the draw call processing on the GPU.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.SynchronisationStage.PixelProcessing">
       <summary>
-        <para>The process of creating and shading the fragments.</para>
+        <para>The stage where the GPU creates and shades fragments.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.Rendering.SynchronisationStage.VertexProcessing">
       <summary>
-        <para>All aspects of vertex processing.</para>
+        <para>The stage where the GPU processes vertices.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.Rendering.SynchronisationStageFlags">
@@ -43363,6 +43558,11 @@ See Also: RenderTexture.enableRandomWrite.</para>
     <member name="P:UnityEngine.RenderTextureDescriptor.flags">
       <summary>
         <para>A set of RenderTextureCreationFlags that control how the texture is created.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.RenderTextureDescriptor.graphicsFormat">
+      <summary>
+        <para>The color format for the RenderTexture. You can set this format to None to achieve depth-only rendering.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.RenderTextureDescriptor.graphicsFormat">
@@ -47831,7 +48031,7 @@ Returns NULL if there is no associated alpha Texture for the source Sprite. This
     </member>
     <member name="P:UnityEngine.SystemInfo.supportsGraphicsFence">
       <summary>
-        <para>Returns true when the platform supports GraphicsFences, and false if otherwise.</para>
+        <para>true if the platform supports GraphicsFences, otherwise false.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.SystemInfo.supportsGyroscope">

@@ -12052,17 +12052,17 @@ Each time an object is (or a group of objects are) created, renamed, parented, u
     </member>
     <member name="P:UnityEditor.EditorApplication.isPaused">
       <summary>
-        <para>Is editor currently paused?</para>
+        <para>Whether the Editor is paused.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.EditorApplication.isPlaying">
       <summary>
-        <para>Is editor currently in play mode?</para>
+        <para>Whether the Editor is in Play mode.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode">
       <summary>
-        <para>Is editor either currently in play mode, or about to switch to it? (Read Only)</para>
+        <para>Whether the Editor is either currently in Play mode or about to switch to it. (Read Only)</para>
       </summary>
     </member>
     <member name="P:UnityEditor.EditorApplication.isRemoteConnected">
@@ -19383,7 +19383,7 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
     </member>
     <member name="P:UnityEditor.EditorGUIUtility.hierarchyMode">
       <summary>
-        <para>Is the Editor GUI is hierarchy mode?</para>
+        <para>Is the Editor GUI in hierarchy mode?</para>
       </summary>
     </member>
     <member name="P:UnityEditor.EditorGUIUtility.isProSkin">
@@ -22538,6 +22538,11 @@ MYCOMPUTER\SHAREDFOLDER\.</para>
         <para>The hashes of the current baked state of the ScriptableBakedReflectionSystem.</para>
       </summary>
     </member>
+    <member name="P:UnityEditor.Experimental.Rendering.IScriptableBakedReflectionSystem.stateHashes">
+      <summary>
+        <para>The hashes of the current baked state of the ScriptableBakedReflectionSystem.</para>
+      </summary>
+    </member>
     <member name="M:UnityEditor.Experimental.Rendering.IScriptableBakedReflectionSystem.BakeAllReflectionProbes">
       <summary>
         <para>Implement this method to bake all of the loaded reflection probes.</para>
@@ -23762,7 +23767,7 @@ Example: "GlobalObjectId_V1-2-74c253e3f16be4776bb2d88e01f77c8a-902906726-0".</pa
     </member>
     <member name="M:UnityEditor.Handles.DrawGizmos">
       <summary>
-        <para>Draw a subset of Gizmos (before or after postprocessing) for the given camera.</para>
+        <para>Draws a Rendering.GizmoSubset before or after post-processing for the given camera.</para>
       </summary>
       <param name="camera">The camera of the current view.</param>
     </member>
@@ -43301,7 +43306,7 @@ The name of the that is currently selected in the Profiler Window, or null if no
     </member>
     <member name="M:UnityEditor.PropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
       <summary>
-        <para>Override this method to make your own UIElements based GUI for the property.</para>
+        <para>Override this method to make your own UI Toolkit based GUI for the property.</para>
       </summary>
       <param name="property">The SerializedProperty to make the custom GUI for.</param>
       <returns>
@@ -43569,9 +43574,19 @@ The name of the that is currently selected in the Profiler Window, or null if no
         <para>The build target to compile the shader variant for. (Read Only)</para>
       </summary>
     </member>
+    <member name="P:UnityEditor.Rendering.ShaderCompilerData.buildTarget">
+      <summary>
+        <para>The build target to compile the shader variant for. (Read Only)</para>
+      </summary>
+    </member>
     <member name="P:UnityEditor.Rendering.ShaderCompilerData.graphicsTier">
       <summary>
-        <para> A GraphicsTier classifies low, medium and high performance hardware. You can only set a Graphics Tier in the Built-in Render Pipeline. </para>
+        <para>A GraphicsTier classifies low, medium and high performance hardware. You can only set a Graphics Tier in the Built-in Render Pipeline.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEditor.Rendering.ShaderCompilerData.graphicsTier">
+      <summary>
+        <para>A GraphicsTier classifies low, medium and high performance hardware. You can only set a Graphics Tier in the Built-in Render Pipeline.</para>
       </summary>
     </member>
     <member name="F:UnityEditor.Rendering.ShaderCompilerData.platformKeywordSet">
@@ -43584,9 +43599,19 @@ The name of the that is currently selected in the Profiler Window, or null if no
         <para>Shader compiler used to generate player data shader variants.</para>
       </summary>
     </member>
+    <member name="P:UnityEditor.Rendering.ShaderCompilerData.shaderCompilerPlatform">
+      <summary>
+        <para>Shader compiler used to generate player data shader variants.</para>
+      </summary>
+    </member>
     <member name="F:UnityEditor.Rendering.ShaderCompilerData.shaderKeywordSet">
       <summary>
         <para>A collection of Rendering.ShaderKeyword that represents a specific shader variant.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEditor.Rendering.ShaderCompilerData.shaderRequirements">
+      <summary>
+        <para>Shader features required by a specific shader.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.Rendering.ShaderCompilerData.shaderRequirements">
@@ -43826,6 +43851,16 @@ The name of the that is currently selected in the Profiler Window, or null if no
         <para>An opaque identifier for the being compiled.</para>
       </summary>
     </member>
+    <member name="P:UnityEditor.Rendering.ShaderSnippetData.pass">
+      <summary>
+        <para>An opaque identifier for the being compiled.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEditor.Rendering.ShaderSnippetData.passName">
+      <summary>
+        <para>Shader.</para>
+      </summary>
+    </member>
     <member name="P:UnityEditor.Rendering.ShaderSnippetData.passName">
       <summary>
         <para>Shader.</para>
@@ -43834,6 +43869,16 @@ The name of the that is currently selected in the Profiler Window, or null if no
     <member name="P:UnityEditor.Rendering.ShaderSnippetData.passType">
       <summary>
         <para>Shader pass type for Unity's lighting pipeline.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEditor.Rendering.ShaderSnippetData.passType">
+      <summary>
+        <para>Shader pass type for Unity's lighting pipeline.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEditor.Rendering.ShaderSnippetData.shaderType">
+      <summary>
+        <para>Shader stage in the rendering the pipeline.</para>
       </summary>
     </member>
     <member name="P:UnityEditor.Rendering.ShaderSnippetData.shaderType">
@@ -54830,7 +54875,7 @@ Valid values are in the range [0-1], with higher values generating a tighter mes
     <member name="T:UnityEditor.UIElements.LayerMaskField">
       <summary>
         <para>
- Make a field for layer as masks.
+ A LayerMaskField editor.
  </para>
       </summary>
     </member>

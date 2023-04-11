@@ -4106,7 +4106,7 @@ Note that IgnoreLayerCollision will reset the trigger state of affected collider
     </member>
     <member name="P:UnityEngine.Rigidbody.interpolation">
       <summary>
-        <para>Interpolation allows you to smooth out the effect of running physics at a fixed frame rate.</para>
+        <para>Interpolation provides a way to manage the appearance of jitter in the movement of your Rigidbody GameObjects at run time.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Rigidbody.isKinematic">
