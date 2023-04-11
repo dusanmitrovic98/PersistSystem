@@ -28,7 +28,7 @@ public class PersistSystem
     }
 
     /// <summary>
-    /// Determines if file exists or not.
+    /// Determines if a file exists at the given file path.
     /// </summary>
     /// <param name="filePath">Given file path.</param>
     /// <returns>True if file exists, otherwise false.</returns>
