@@ -30,7 +30,7 @@ public class PersistSystem
     /// <summary>
     /// Determines if a file exists at the given file path.
     /// </summary>
-    /// <param name="filePath">Given file path.</param>
+    /// <param name="filePath">The path to the file to check for existence.</param>
     /// <returns>True if file exists, otherwise false.</returns>
     public static bool FileExist(string filePath)
     {
