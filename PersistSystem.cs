@@ -50,7 +50,7 @@ public class PersistSystem
     /// <summary>
     /// Validates given file path. Throws FileNotFoundException if file does not exist.
     /// </summary>
-    /// <param name="filePath">Given file path.</param>
+    /// <param name="filePath">The path to the file to validate.</param>
     public static void ValidateFilePath(string filePath)
     {
         if (!FileExist(filePath))
@@ -62,7 +62,7 @@ public class PersistSystem
     /// <summary>
     /// Validates given directory path. Throws DirectoryNotFoundException if file does not exist.
     /// </summary>
-    /// <param name="directoryPath">Given directory path.</param>
+    /// <param name="directoryPath">The path to the directory to validate.</param>
     public static void ValidateDirectoryPath(string directoryPath)
     {
         if (!DirectoryExists(directoryPath))
