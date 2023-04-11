@@ -1,7 +1,7 @@
 ﻿namespace PersistSystemCore;
 
 /// <summary>
-/// Persist system class used to save and load JSON objects to files.
+/// A class that provides methods for saving and loading JSON objects to/from files.
 /// </summary>
 public class PersistSystem
 {
