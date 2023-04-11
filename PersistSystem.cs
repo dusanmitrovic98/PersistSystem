@@ -40,7 +40,7 @@ public class PersistSystem
     /// <summary>
     /// Determines if a directory exists at the given directory path.
     /// </summary>
-    /// <param name="directoryPath">Given directory path.</param>
+    /// <param name="directoryPath">The path to the directory to check for existence.</param>
     /// <returns>True if directory exists, otherwise false.</returns>
     public static bool DirectoryExists(string directoryPath)
     {
