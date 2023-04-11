@@ -44,12 +44,7 @@ public class PersistSystem
     /// <returns>True if directory exists, otherwise false.</returns>
     public static bool DirectoryExists(string directoryPath)
     {
-        if (!Directory.Exists(directoryPath))
-        {
-            return false;
-        }
-
-        return true;
+        return Directory.Exists(directoryPath);
     }
 
     /// <summary>
