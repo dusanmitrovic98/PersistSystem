@@ -34,12 +34,7 @@ public class PersistSystem
     /// <returns>True if the file exists, false otherwise.</returns>
     public static bool FileExist(string filePath)
     {
-        if (!File.Exists(filePath))
-        {
-            return false;
-        }
-
-        return true;
+        return File.Exists(filePath);
     }
 
     /// <summary>
