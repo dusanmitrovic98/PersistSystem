@@ -19,7 +19,7 @@ public class PersistSystem
     /// <summary>
     /// Load a JSON object from a file.
     /// </summary>
-    /// <param name="filePath">File path.</param>
+    /// <param name="filePath">The path to the file from which the JSON object will be loaded.</param>
     /// <returns>JSON object.</returns>
     public string LoadJSON(string filePath)
     {
