@@ -38,7 +38,7 @@ public class PersistSystem
     }
 
     /// <summary>
-    /// Determines if directory exists or not.
+    /// Determines if a directory exists at the given directory path.
     /// </summary>
     /// <param name="directoryPath">Given directory path.</param>
     /// <returns>True if directory exists, otherwise false.</returns>
