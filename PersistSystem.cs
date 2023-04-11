@@ -13,7 +13,6 @@ public class PersistSystem
     public static void SaveJSON(string filePath, string json)
     {
         ValidateFilePath(filePath);
-
         File.WriteAllText(filePath, json);
     }
 
