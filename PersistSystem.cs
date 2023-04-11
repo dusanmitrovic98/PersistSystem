@@ -9,7 +9,7 @@ public class PersistSystem
     /// Save a JSON object to a file.
     /// </summary>
     /// <param name="filePath">The path to the file where the JSON object will be saved.</param>
-    /// <param name="json">JSON object that will be saved.</param>
+    /// <param name="json">The JSON object to be saved.</param>
     public static void SaveJSON(string filePath, string json)
     {
         ValidateFilePath(filePath);
