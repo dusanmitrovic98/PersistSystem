@@ -24,7 +24,6 @@ public class PersistSystem
     public string LoadJSON(string filePath)
     {
         ValidateFilePath(filePath);
-
         return File.ReadAllText(filePath);
     }
 
