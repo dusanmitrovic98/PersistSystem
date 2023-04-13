@@ -267,6 +267,9 @@
         <Reference Include="UnityEditor.WindowsStandalone.Extensions">
             <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
         </Reference>
+         <Reference Include="System.IO">
+            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <Target Name="CopyDllToUnity" AfterTargets="Build">
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="C:/Users/BK2O198/Documents/Workstation/U.EasyToDoFree/Assets/Plugins" />
