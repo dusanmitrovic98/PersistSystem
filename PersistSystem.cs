@@ -10,11 +10,10 @@ public class PersistSystem
     /// </summary>
     /// <param name="filePath">The path to the file where the JSON object will be saved.</param>
     /// <param name="json">The JSON object to be saved.</param>
-    public static string SaveJSON(string filePath, string json) // string <- void
+    public static void SaveJSON(string filePath, string json) // string <- void
     {
-        // ValidateFilePath(filePath);
-        // File.WriteAllText(filePath, json);
-        return "SaveJSON";
+        ValidateFilePath(filePath);
+        System.IO.File.WriteAllText(filePath, json);
     }
 
     /// <summary>
@@ -24,9 +23,8 @@ public class PersistSystem
     /// <returns>The JSON object read from the file.</returns>
     public static string LoadJSON(string filePath)
     {
-        // ValidateFilePath(filePath);
-        // return File.ReadAllText(filePath);
-        return "LoadJSON";
+        ValidateFilePath(filePath);
+        return System.IO.File.ReadAllText(filePath);
     }
 
     /// <summary>
