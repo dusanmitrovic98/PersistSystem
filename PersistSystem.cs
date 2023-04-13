@@ -21,7 +21,7 @@ public class PersistSystem
     /// </summary>
     /// <param name="filePath">The path to the file from which the JSON object will be loaded.</param>
     /// <returns>The JSON object read from the file.</returns>
-    public string LoadJSON(string filePath)
+    public static string LoadJSON(string filePath)
     {
         ValidateFilePath(filePath);
         return File.ReadAllText(filePath);
