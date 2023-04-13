@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace PersistSystemCore;
+﻿namespace PersistSystemCore;
 
 /// <summary>
 /// A class that provides methods for saving and loading JSON objects to/from files.
@@ -12,10 +10,11 @@ public class PersistSystem
     /// </summary>
     /// <param name="filePath">The path to the file where the JSON object will be saved.</param>
     /// <param name="json">The JSON object to be saved.</param>
-    public static void SaveJSON(string filePath, string json)
+    public static string SaveJSON(string filePath, string json) // string <- void
     {
-        ValidateFilePath(filePath);
-        File.WriteAllText(filePath, json);
+        // ValidateFilePath(filePath);
+        // File.WriteAllText(filePath, json);
+        return "SaveJSON";
     }
 
     /// <summary>
@@ -25,8 +24,9 @@ public class PersistSystem
     /// <returns>The JSON object read from the file.</returns>
     public static string LoadJSON(string filePath)
     {
-        ValidateFilePath(filePath);
-        return File.ReadAllText(filePath);
+        // ValidateFilePath(filePath);
+        // return File.ReadAllText(filePath);
+        return "LoadJSON";
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ public class PersistSystem
     /// <returns>True if the file exists, false otherwise.</returns>
     public static bool FileExist(string filePath)
     {
-        return File.Exists(filePath);
+        return System.IO.File.Exists(filePath);
     }
 
     /// <summary>
@@ -46,7 +46,7 @@ public class PersistSystem
     /// <returns>True if directory exists, otherwise false.</returns>
     public static bool DirectoryExists(string directoryPath)
     {
-        return Directory.Exists(directoryPath);
+        return System.IO.Directory.Exists(directoryPath);
     }
 
     /// <summary>
