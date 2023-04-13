@@ -13,7 +13,7 @@ public class PersistSystem
     /// <param name="json">The JSON object to be saved.</param>
     public static void SaveJSON(string filePath, string json) // string <- void
     {
-        ValidateFilePath(filePath);
+        // ValidateFilePath(filePath);
         File.WriteAllText(filePath, json);
     }
 
@@ -24,7 +24,7 @@ public class PersistSystem
     /// <returns>The JSON object read from the file.</returns>
     public static string LoadJSON(string filePath)
     {
-        ValidateFilePath(filePath);
+        // ValidateFilePath(filePath);
         return File.ReadAllText(filePath);
     }
 
