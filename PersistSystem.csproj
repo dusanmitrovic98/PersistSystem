@@ -269,6 +269,8 @@
         </Reference>
          <Reference Include="System.IO">
             <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.dll</HintPath>
+        </Reference><Reference Include="System.IO.FileSystem">
+            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.dll</HintPath>
         </Reference>
     </ItemGroup>
     <Target Name="CopyDllToUnity" AfterTargets="Build">
