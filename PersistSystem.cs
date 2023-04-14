@@ -1,6 +1,4 @@
-﻿namespace PersistSystemCore;
-
-/// <summary>
+﻿/// <summary>
 /// A class that provides methods for saving and loading JSON objects to/from files.
 /// </summary>
 public class PersistSystem
@@ -13,7 +11,11 @@ public class PersistSystem
     public static void SaveJSON(string filePath, string json) // string <- void
     {
         ValidateFilePath(filePath);
-        File.WriteAllText(filePath, json);
+
+        using (StreamWriter streamWriter = new StreamWriter(filePath))
+        {
+            streamWriter.Write(json);
+        }
     }
 
     /// <summary>
