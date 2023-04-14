@@ -267,42 +267,6 @@
         <Reference Include="UnityEditor.WindowsStandalone.Extensions">
             <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
         </Reference>
-        <Reference Include="System.IO.Compression">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.Compression.FileSystem">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.FileSystem.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.Compression.ZipFile">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Compression.ZipFile.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.FileSystem">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.FileSystem.DriveInfo">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.DriveInfo.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.FileSystem.Primitives">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Primitives.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.FileSystem.Watcher">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Watcher.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.IsolatedStorage">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.IsolatedStorage.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.MemoryMappedFiles">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.MemoryMappedFiles.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.Pipes">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Pipes.dll</HintPath>
-        </Reference>
-        <Reference Include="System.IO.UnmanagedMemoryStream">
-            <HintPath>C:\Users\BK2O198\Programs\Unity\Hub\Editor\2022.2.12f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.UnmanagedMemoryStream.dll</HintPath>
-        </Reference>
     </ItemGroup>
     <Target Name="CopyDllToUnity" AfterTargets="Build">
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="C:/Users/BK2O198/Documents/Workstation/U.EasyToDoFree/Assets/Plugins" />
